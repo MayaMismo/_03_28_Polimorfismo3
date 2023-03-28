@@ -2,6 +2,7 @@ package com.adecco.presentacion;
 
 import com.adecco.modelo.Agua;
 import com.adecco.modelo.Bebida;
+import com.adecco.modelo.Gaseosa;
 
 public class ProbarBebidas {
     public static void main(String[] args) {
@@ -13,5 +14,10 @@ public class ProbarBebidas {
         a2.setOrigen("Sierra Nevada");
         System.out.println(a2);
 
+        Bebida g1 = new Gaseosa("coca cola Zero", "Coca-cola", 0.75, 0.12);
+        //ha pasado el tiempo y quiero cambiar la cantidad de azucar:
+        Gaseosa g2 = (Gaseosa) g1;
+        g2.setCantidadAzucar(0.05);
+        System.out.println(g2);
     }
 }
